@@ -1,0 +1,396 @@
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-body;
+  overflow-x: hidden;
+  background-color: $color-background;
+  color: $color-text;
+
+}
+
+.text--light {
+  color: $color-text-light;
+}
+
+.maincontainer {
+  display: flex;
+  justify-content: center;
+
+  .device-container {
+    background-image: url("../img/device.png");
+    //width: 425px;
+    width: 350px;
+    height: 700px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+
+    .safearea {
+      width: 304px;
+      height: 596px;
+      background: #fafafa;
+      margin-top: 52px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      &.full {
+        height: 680px;
+        margin-top: 10px;
+        position: relative;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+// Tabbar
+
+.tabbar {
+  width: 100%;
+  background: #FFF;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px 15px 0 0;
+  padding: 5px 25px;
+  box-shadow: 0 -10px 15px -15px rgba(13, 27, 56, .20);
+
+  &-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    &.active {
+      color: $color-red;
+    }
+
+    &.discover {
+      background: $color-red;
+      border-radius: 50%;
+      color: #FFF;
+      width: 70px;
+      height: 70px;
+      transform: translateY(0px);
+      box-shadow: 0 0 0 5px #FFF, 0 -10px 15px -10px rgba(13, 27, 56, .20);
+    }
+
+    i {
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .bildirim-icon {
+      background: $color-red;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      position: absolute;
+      top: 15px;
+      right: 10px;
+
+    }
+  }
+}
+
+// Links
+a {
+  color: $color-text;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-text-dark;
+  }
+}
+
+@keyframes fadeIn{
+  0% { opacity:0; }
+  66% { opacity:0; }
+  100% { opacity:1; }
+}
+@keyframes fadeInUp{
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);//
+  }
+}
+
+// Splash-page-alternate
+
+.splash-page {
+  background: #000;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .logo-wrapper {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+
+    img {
+      width: 200px;
+      animation: fadeIn 1s forwards;
+      opacity: 1;
+    }
+
+    p {
+      color: #FFF;
+      margin-top: 20px;
+      letter-spacing: 1px;
+      text-align: center;
+      font-size: 13px;
+      margin-bottom: 0;
+      font-family: monospace;
+      animation: fadeIn 1s forwards;
+      animation-delay: 1s;
+      opacity: 0;
+    }
+  }
+
+  .figure-top {
+    position: absolute;
+    top: calc(50% - 190px);
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInUp 1s forwards;
+    animation-delay: 4s;
+    opacity: 0;
+
+    &-item {
+
+    }
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .figure-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-item {
+      transform: none;
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+      animation-delay: 3s;
+
+      &:first-child {
+        //transform: rotate(10deg);
+        animation-delay: 2.5s;
+      }
+
+      &:last-child {
+        //transform: rotate(-10deg);
+        animation-delay: 3.5s;
+      }
+    }
+
+    img {
+      width: 100px;
+    }
+  }
+}
+
+
+.see_all {
+
+  &-wrapper {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &-title {
+    flex: 2;
+    font-size: 11px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    color: $color-text;
+  }
+
+  &-button {
+    flex: 1;
+    justify-content: flex-end;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    color: $color-light;
+
+
+    i {
+      margin-left: 10px;
+    }
+  }
+}
+
+.back {
+  flex: 1;
+  padding: 10px;
+  box-shadow: 0 4px 24px -8px $color-shadow;
+  height: 40px;
+
+  &-item {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+
+    i {
+      margin-right: 5px;
+      font-size: 17px;
+    }
+  }
+
+  .save-restaruant {
+    font-size: 17px;
+    transition: $transition-fast;
+
+    .icon-bookmark-fill {
+      display: none;
+    }
+
+    .icon-bookmark {
+      display: block;
+    }
+
+    &.active {
+      color: $color-red;
+
+      .icon-bookmark-fill {
+        display: block;
+      }
+
+      .icon-bookmark {
+        display: none;
+      }
+
+      svg {
+        fill: red;
+      }
+    }
+  }
+}
+
+// Geçici Menü
+.mobil_menu_linkler {
+  display: none;
+}
+
+.linkler {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+
+
+}
+
+#linkler {
+  display: none;
+}
+
+// Back header'ı bulunan sayfalarda header harici alanı belirtir
+.within_back_area {
+  flex: 1;
+  min-height: calc(100% - 30px);
+  padding: $padding-normal;
+
+
+}
+
+@media (max-width: 992px) {
+  .mobil_menu_linkler {
+    display: block;
+    font-size: 40px;
+    transform: translateX(10px);
+  }
+  .linkler {
+    display: none;
+    background: #000;
+    padding: 40px;
+    border-radius: 20px;
+    top: 50px;
+    z-index: 99999;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    a {
+      color: #FFF;
+      margin-bottom: 10px;
+      display: block;
+
+      &:focus {
+        color: red;
+      }
+    }
+  }
+  #linkler {
+    &:checked + .linkler {
+      display: block;
+    }
+  }
+}
+
+
+.tabcontent {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.p-20 {
+  padding: 0 20px;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: $color-divider;
+  margin: 15px 0;
+}
+
+.divider-circle {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: $color-divider;
+  margin: 0 10px;
+}

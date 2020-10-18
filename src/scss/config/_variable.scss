@@ -1,0 +1,54 @@
+/* Colors */
+$color-background: #fff;
+$color-text: #32325D;
+$color-text-dark: #2b2b51;
+$color-light: #8898AA;
+$color-text-light: #8898AA;
+$color-extra-light: #ADB5BD;
+$color-link: #4A90E2;
+$color-border: #ADB5BD;
+$color-border--focus: #8898AA;
+$color-border-light: #e8e8ec;
+$color-divider: #e4eaf1;
+
+$color-button-light: #f7f8fa;
+$color-button-light--focus: #c5cdd6;
+$color-shadow: rgba(#32325D,.1);
+
+$color-green: #2DCE89;
+$color-red: #e91d22;
+$color-red--dark: #d4171b;
+$color-purple: #5E72E4;
+$color-blue: #1b4cdd;
+$color-yellow: #efbf11;
+
+
+$color-first: $color-red;
+$color-title: #17262F;
+$color-form-bg: #F7F6F4;
+/* Font Sizes */
+$font-size-title--xl: 50px;
+$font-size-title--lg: 40px;
+$font-size-title--md: 32px;
+$font-size-title--sm: 25px;
+$font-size-title--xs: 20px;
+$font-size-title--xxs: 17px;
+$font-size-body: 14px;
+
+/* Font Families*/
+$font-family-base: 'Sofia Pro';
+//$font-family-base: 'Roboto', sans-serif;
+
+/* Box Shadows */
+$button-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 0px 4px 4px rgba(50, 50, 93, 0.11);
+$button-shadow--hover: 0px 7px 14px rgba(50, 50, 93, 0.1), 0px 3px 6px rgba(0, 0, 0, 0.08);
+
+/* Input */
+$input-br: 10px;
+$input-padding: 10px;
+
+/* Normal Padding */
+$padding-normal: 20px;
+
+$transition: .4s cubic-bezier(.29, .13, .27, .74);
+$transition-fast: .2s cubic-bezier(.29, .13, .27, .74);

@@ -1,0 +1,22 @@
+.status {
+  display: flex;
+  align-items: center;
+
+  &__circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
+    margin-right: 5px;
+  }
+
+  &--success {
+    color: $color-green;
+  }
+  &--danger {
+    color: $color-red;
+  }
+  &--warning {
+    color: $color-yellow;
+  }
+}

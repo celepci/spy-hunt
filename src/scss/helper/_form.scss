@@ -1,0 +1,105 @@
+.input-wrapper {
+  position: relative;
+  width: 100%;
+
+  & + & {
+    margin-top: 10px;
+  }
+  &.input-number{
+
+  }
+
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+
+  &.password {
+    .input {
+      padding-right: 40px;
+    }
+
+    .password-see {
+      position: absolute;
+      height: 43px;
+      width: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 0;
+      top: 0;
+
+      i:last-child {
+        display: none;
+      }
+
+      &.active {
+        i {
+          display: none;
+        }
+
+        i:last-child {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &.search {
+    .filter {
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 5px;
+      top: 7px;
+      border-radius: 10px;
+      background: $color-red;
+
+      i {
+        color: #FFF;
+        left: unset;
+      }
+    }
+  }
+}
+
+.input {
+  border: 1px solid transparent;
+  color: $color-text;
+  border-radius: $border-radius;
+  padding: $input-padding;
+  width: 100%;
+  background: transparent;
+  padding-left: 35px;
+  box-shadow: 0 4px 24px -5px $color-shadow;
+
+  &:focus {
+    border-color: $color-border;
+    outline: 0;
+
+    .input-icon {
+      color: $color-border--focus;
+    }
+  }
+
+  &.no-icon {
+    padding: $input-padding;
+  }
+
+
+  &::placeholder {
+    color: rgba($color-light, .5);
+    font-weight: 300;
+  }
+}
+
+.input-icon {
+  color: rgba($color-light, .5);
+  font-size: 18px;
+  user-select: none;
+}

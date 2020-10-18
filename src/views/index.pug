@@ -1,0 +1,21 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .main
+                    .main-content
+                    include blocks/tabbar
+
+
+
+
+
+
