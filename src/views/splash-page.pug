@@ -13,19 +13,26 @@ block content
                     .logo-wrapper
                         img(src="img/logo5.svg")
                         p Casus kim bulabilir misin?
+                        .new-game.mt-20.button.button--icon--left.button--red
+                            i.icon-play-circle
+                            span Yeni Oyun
+                        .how-play.mt-20.button.button--icon--left.button--light(onclick='$("#howPlay").addClass("active")')
+                            i.icon-help-circle
+                            | Nasıl Oynanır?
+                        .settings-button(onclick='$("#settingsModal").addClass("active")')
+                            i.icon-settings
                     .figure-top
                         .figure-top-item
                             img(src="img/figures/spy.svg")
                     .figure-bottom
                         .figure-bottom-item
-                            img(src="img/figures/boy.svg")
+                            svg.icon
+                                use(xlink:href='#boy')
                         .figure-bottom-item
-                            img(src="img/figures/eskimo.svg")
+                            svg.icon
+                                use(xlink:href='#eskimo')
                         .figure-bottom-item
-                            img(src="img/figures/girl.svg")
-
-
-
-
-
-
+                            svg.icon
+                                use(xlink:href='#girl')
+                    include blocks/settings-modal
+                    include blocks/how-play-modal

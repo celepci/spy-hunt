@@ -1,75 +1,56 @@
-.main{
+.main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  &-content{
+
+  &-content {
     flex: 1;
-    max-height: calc(100% - 55px); // 100% - tabbar height
     width: 100%;
     height: 100%;
     padding: $padding-normal;
+    background: #000;
+    position: relative;
+    overflow: hidden;
 
-    .location{
-      display: flex;
+    .logo {
       flex: 1;
-      align-items: center;
-      margin-bottom: 2px;
-      color: $color-text-light;
-
-      &-icon{
-        margin-right: 4px;
-        font-size: 11px;
-      }
-      &-text{
-        font-size: 10px;
-        font-weight: 300;
-      }
-    }
-    &-header{
+      flex-shrink: 0;
       display: flex;
       align-items: center;
-      .logo-wrapper{
-        flex: 1;
-        margin-right: 20px;
-        flex-shrink: 0;
-        max-width: 50%;
+      height: 50px;
+
+      img {
+        height: inherit;
+        margin: 20px auto;
+      }
+    }
+
+    &-grid {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      justify-content: space-between;
+
+      &-item {
+        width: calc(50% - 10px);
+        flex: 0 0 calc(50% - 10px);
         display: flex;
+        flex-direction: column;
         align-items: center;
-        img{
-          width: 100%;
-        }
-      }
-      .scan_code{
-        flex: 1;
-        max-width: 50%;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        font-size: 20px;
-      }
+        box-shadow:inset 0 0 10px #1f1f1f;
+        padding: 20px 10px;
+        color: #FFF;
+        border-radius: 10px;
+        margin-top: 20px;
+        background: #111;
 
-    }
-    .welcome_area{
-      margin-top: 20px;
-      &-title{
-        font-size: 22px;
-        font-weight: 300;
-        color: $color-text;
-        span{
-          margin-left: 5px;
-          font-weight: 500;
+        &__icon {
+          font-size: 22px;
         }
-      }
-      &-subtitle{
-        color: $color-text-light;
-        font-size: 12px;
-        font-weight: 300;
-      }
-    }
-    .search_area{
-      margin-top: 20px;
-      .input-wrapper{
 
+        &__title {
+
+        }
       }
     }
   }

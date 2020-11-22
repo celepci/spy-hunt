@@ -1,0 +1,36 @@
+#settingsModal.bottom-modal
+    .bottom-modal__divider(onclick='$("#settingsModal").removeClass("active")')
+        span
+    .bottom-modal-content
+        .settings
+            .bottom-modal-header
+                .bottom-modal__title Oyun Ayarları
+            .divider
+            .settings-section
+                .settings-section__title Tartışma Süresi
+                    span 10 Dk
+                .settings-section__info Casusları yakalamak için oyuncuların birbirine soru soracağı zaman dilimini temsil eder.
+                .line-filter
+                    .line-filter__text 5 Dk
+                    .line-filter__bar
+                        span.line-filter__circle
+                    .line-filter__text 15 Dk
+            .divider
+            .settings-section.settings-section--lateral
+                .settings-section-content
+                    .settings-section__title Rolleri Gizle
+                    .settings-section__info Oyunda belirlenen yere göre casuslar hariç her oyuncuya çeşitli roller verilir.
+                label.switch(for='switch1').settings-section__right
+                    input#switch1.switch__input(type='checkbox')
+                    span.switch__toggle
+            .settings-section.settings-section--lateral
+                .settings-section-content
+                    .settings-section__title Rolleri Gizle
+                    .settings-section__info Casusları yakalamak için oyuncuların birbirine soru soracağı zaman dilimini temsil eder.
+                label.switch(for='switch2').settings-section__right
+                    input#switch2.switch__input(type='checkbox')
+                    span.switch__toggle
+
+            .settings-content__apply-button.button.button--red.button--icon.button--icon--left
+                span Kaydet ve Oyuna Başla
+                i.icon-play-circle

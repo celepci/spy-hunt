@@ -12,7 +12,44 @@ block content
             .safearea
                 .main
                     .main-content
-                    include blocks/tabbar
+                        .logo
+                            img(src="img/logo-flat2.svg")
+                        .main-content-grid
+                            .main-content-grid-item
+                                .main-content-grid-item__icon
+                                    i.icon-play-circle
+                                .main-content-grid-item__title Yeni Oyun
+                            .main-content-grid-item
+                                .main-content-grid-item__icon
+                                    i.icon-users
+                                .main-content-grid-item__title Oyuncu Listesi
+                            .main-content-grid-item
+                                .main-content-grid-item__icon
+                                    i.icon-user-plus
+                                .main-content-grid-item__title Oyuncu Ekle
+                            .main-content-grid-item(onclick='$("#settingsModal").addClass("active")')
+                                .main-content-grid-item__icon
+                                    i.icon-settings
+                                .main-content-grid-item__title Ayarlar
+                            .main-content-grid-item(onclick='$("#howPlay").addClass("active")')
+                                .main-content-grid-item__icon
+                                    i.icon-help-circle
+                                .main-content-grid-item__title Nasıl Oynanır
+                            .main-content-grid-item
+                                .main-content-grid-item__icon
+                                    i.icon-thumbs-up
+                                .main-content-grid-item__title Bize Puan Ver
+                            .main-content-grid-item
+                                .main-content-grid-item__icon
+                                    i.icon-edit-3
+                                .main-content-grid-item__title Mekan Öner
+                            .main-content-grid-item
+                                .main-content-grid-item__icon
+                                    i.icon-info
+                                .main-content-grid-item__title Hakkında
+                        include blocks/settings-modal
+                        include blocks/how-play-modal
+
 
 
 

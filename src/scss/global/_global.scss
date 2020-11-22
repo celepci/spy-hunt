@@ -2,7 +2,7 @@ body {
   font-family: $font-family-base;
   font-size: $font-size-body;
   overflow-x: hidden;
-  background-color: $color-background;
+  background-color: #000;
   color: $color-text;
 
 }
@@ -14,7 +14,6 @@ body {
 .maincontainer {
   display: flex;
   justify-content: center;
-
   .device-container {
     background-image: url("../img/device.png");
     //width: 425px;
@@ -31,17 +30,17 @@ body {
     .safearea {
       width: 304px;
       height: 596px;
-      background: #fafafa;
+      background: #000;
       margin-top: 52px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-
       &.full {
-        height: 680px;
-        margin-top: 10px;
+        height: 660px;
+        margin-top: 20px;
         position: relative;
-        z-index: -1;
+        overflow: hidden;
+        border-radius: 30px;
       }
     }
   }
@@ -114,11 +113,16 @@ a {
   }
 }
 
-@keyframes fadeIn{
-  0% { opacity:0; }
-  100% { opacity:1; }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-@keyframes fadeInUp{
+
+@keyframes fadeInUp {
   0% {
     opacity: 0;
     transform: translateY(30px);
@@ -126,7 +130,7 @@ a {
 
   to {
     opacity: 1;
-    transform: translateY(0);//
+    transform: translateY(0); //
   }
 }
 
@@ -171,16 +175,40 @@ a {
     }
   }
 
+  .new-game, .how-play {
+    animation: fadeInUp 1s forwards;
+    opacity: 0;
+  }
+
+  .new-game {
+    animation-delay: 2s;
+  }
+
+  .how-play {
+    animation-delay: 2.25s;
+  }
+
+  .settings-button {
+    animation: fadeInUp 1s forwards;
+    opacity: 0;
+    animation-delay: 5s;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    color: #FFF;
+    font-size: 20px;
+  }
+
   .figure-top {
     position: absolute;
-    top: calc(50% - 190px);
+    top: calc(50% - 250px);
     left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     animation: fadeInUp 1s forwards;
-    animation-delay: 4s;
+    animation-delay: 4.5s;
     opacity: 0;
 
     &-item {
@@ -205,16 +233,21 @@ a {
       transform: none;
       opacity: 0;
       animation: fadeInUp 1s forwards;
-      animation-delay: 3s;
+      animation-delay: 3.5s;
+
+      svg {
+        height: 90px;
+        width: 90px;
+      }
 
       &:first-child {
         //transform: rotate(10deg);
-        animation-delay: 2.5s;
+        animation-delay: 3s;
       }
 
       &:last-child {
         //transform: rotate(-10deg);
-        animation-delay: 3.5s;
+        animation-delay: 4s;
       }
     }
 
@@ -260,61 +293,45 @@ a {
 .back {
   flex: 1;
   padding: 10px;
-  box-shadow: 0 4px 24px -8px $color-shadow;
+  box-shadow: 0 10px 24px -12px #222;
   height: 40px;
-
+  color: #FFF;
+  position: relative;
   &-item {
     font-size: 13px;
     display: flex;
     align-items: center;
-
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     i {
       margin-right: 5px;
       font-size: 17px;
     }
   }
 
-  .save-restaruant {
-    font-size: 17px;
-    transition: $transition-fast;
-
-    .icon-bookmark-fill {
-      display: none;
-    }
-
-    .icon-bookmark {
-      display: block;
-    }
-
-    &.active {
-      color: $color-red;
-
-      .icon-bookmark-fill {
-        display: block;
-      }
-
-      .icon-bookmark {
-        display: none;
-      }
-
-      svg {
-        fill: red;
-      }
-    }
+  &-title {
+    text-align: center;
   }
+
 }
 
 // Geçici Menü
 .mobil_menu_linkler {
   display: none;
+  color: #FFF;
+
 }
 
 .linkler {
   position: absolute;
   left: 20px;
   top: 20px;
+  color: #FFF;
 
-
+  a {
+    color: #FFF;
+  }
 }
 
 #linkler {
@@ -336,11 +353,12 @@ a {
   }
   .linkler {
     display: none;
-    background: #000;
+    background: #222;
     padding: 40px;
     border-radius: 20px;
     top: 50px;
     z-index: 99999;
+    color: #FFF;
 
     ul {
       list-style: none;
@@ -390,4 +408,94 @@ a {
   border-radius: 50%;
   background-color: $color-divider;
   margin: 0 10px;
+}
+
+@keyframes eyes {
+  24% {
+    opacity: 1;
+  }
+  26% {
+    opacity: 0;
+  }
+  28% {
+    opacity: 1;
+  }
+  29% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(7px);
+  }
+  65% {
+    transform: translateX(0px);
+  }
+  85% {
+    transform: translateX(-7px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+#eyes {
+  animation: eyes 8s infinite ease-in-out;
+}
+
+#eyes2 {
+  animation: eyes 8s infinite ease-in-out;
+  animation-delay: 1.4s;
+}
+
+#eyes3 {
+  animation: eyes 8s infinite ease-in-out;
+  animation-delay: 3s;
+}
+
+.settings {
+  height: 500px;
+
+
+  &__turn-default {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &-section {
+    &--lateral {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .switch__toggle {
+      margin-right: 0;
+    }
+
+    &-content {
+      padding-right: 15px;
+    }
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        color: $color-first;
+      }
+    }
+
+    &__info {
+      font-size: 10px;
+      font-weight: 300;
+      line-height: 1.2em;
+      color: $color-text-light;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+p {
+  margin-bottom: 10px;
+  font-weight: 300;
+  //color: $color-text;
 }

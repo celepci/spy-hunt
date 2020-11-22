@@ -13,9 +13,11 @@
   & + & {
     margin-top: 10px;
   }
-
+  &--link {
+    color: rgba($color-red,.7);
+  }
   &--red {
-    background-color: $color-red;
+    background: linear-gradient(to bottom, $color-red--soft, $color-red);
     color: #FFF;
 
     &:active, &:focus {
@@ -23,11 +25,13 @@
     }
   }
 
+
   &--light {
-    background-color: $color-button-light;
+    background: linear-gradient(to bottom, $color-white--soft, $color-white);
+
 
     &:active, &:focus {
-      background-color: $color-button-light--focus;
+
     }
   }
 

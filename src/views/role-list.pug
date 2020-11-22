@@ -1,0 +1,37 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .back
+                    .back-title Oyun Başlıyor
+                .within_back_area
+                    .role-list
+                        .role-list__toptitle
+                            i.icon-info.mr-1
+                            | Telefonu Muhammet oyuncusuna ver.
+                        .role-list__image
+                            img(src="img/players/muhammet.jpg")
+                        .role-list__name Muhammet
+
+                        .button.button--red.mt-20 Rolünü Gör
+
+
+
+
+
+
+
+
+
+
+
+
+

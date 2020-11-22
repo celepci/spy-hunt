@@ -1,0 +1,47 @@
+.role-list {
+  color: #FFF;
+  &__toptitle{
+    color: #FFF;
+    opacity: .4;
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  &__name {
+    text-align: center;
+  }
+  &__role {
+    text-align: center;
+    opacity: .7;
+    font-size: 13px;
+  }
+
+  &__info-text{
+    color: #FFF;
+    opacity: .4;
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}

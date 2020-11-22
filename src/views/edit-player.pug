@@ -1,0 +1,38 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .back
+                    .back-item
+                        i.icon-chevron-left
+                    .back-title Oyuncu Düzenle
+                .within_back_area
+                    .edit-player
+                        .edit-player__image
+                            img(src="img/players/muhammet.jpg")
+                        .edit-player__name
+                            input.input.no-icon(type="text",placeholder="Kullanıcı Adı",value="Muhammet")
+                        .button.button--red.mt-20 Kaydet
+                        .button.button--link Oyuncuyu Kaldır
+
+
+
+
+
+
+
+
+
+
+
+
+
+

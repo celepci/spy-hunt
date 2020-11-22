@@ -1,0 +1,36 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .back
+                    .back-title Oyun Başlıyor
+                .within_back_area
+                    .role-list
+                        .role-list__image
+                            img(src="img/figures/spy.svg")
+                        .role-list__name Sen Casussun
+                        .role-list__info-text
+                            i.icon-info.mr-1
+                            | Sorulan sorulara göre mekanı tahmin etmeye çalış. Sakın casus olduğunu çaktırma.
+                        .button.button--red.mt-20 Tamam
+
+
+
+
+
+
+
+
+
+
+
+
+
