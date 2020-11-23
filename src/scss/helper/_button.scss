@@ -36,7 +36,7 @@
   }
 
   &--icon {
-    &--left {
+    &-left {
       img, i, svg {
         width: 1em;
         height: 1em;
@@ -47,10 +47,24 @@
         transform: translateY(-50%);
       }
     }
+    &-right {
+      img, i, svg {
+        width: 1em;
+        height: 1em;
+        font-size: 20px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
   }
 
   &--xs {
     display: inline-flex;
     font-size: 14px;
+  }
+  &--absolute{
+    bottom: 10px;
   }
 }

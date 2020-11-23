@@ -47,6 +47,26 @@
       font-size: 20px;
       opacity: .5;
     }
+    &__select{
+      display: flex;
+      border:1px solid $color-border;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      margin-left: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i{
+        display: none;
+      }
+      &.active{
+        background: $color-red;
+        i{
+          display: block;
+        }
+      }
+    }
   }
 }
 

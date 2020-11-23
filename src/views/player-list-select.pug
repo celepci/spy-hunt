@@ -1,0 +1,83 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .back
+                    .back-item
+                        i.icon-chevron-left
+                    .back-title Oyuncu Listesi
+                .within_back_area
+                    .player-list
+                        .player-list-item.new
+                            .player-list-item__image
+                                i.icon-plus
+                            .player-list-item__name Yeni Oyuncu Ekle
+                        .player-list-item
+                            .player-list-item__image
+                                img(src="img/players/apo.jpg")
+                            .player-list-item__name Apo
+                            .player-list-item__select.active
+                                i.icon-check
+                        .player-list-item
+                            .player-list-item__image
+                                img(src="img/players/elif.jpg")
+                            .player-list-item__name Elif
+                            .player-list-item__select.active
+                                i.icon-check
+                        .player-list-item
+                            .player-list-item__image
+                                img(src="img/players/emre.jpg")
+                            .player-list-item__name Emre
+                            .player-list-item__select.active
+                                i.icon-check
+                        .player-list-item
+                            .player-list-item__image
+                                img(src="img/players/ipek.jpg")
+                            .player-list-item__name İpek
+                            .player-list-item__select.active
+                                i.icon-check
+                        .player-list-item
+                            .player-list-item__image
+                                img(src="img/players/muhammet.jpg")
+                            .player-list-item__name Muhammet
+                            .player-list-item__select
+                                i.icon-check
+                        .player-list-item
+                            .player-list-item__image
+                                img(src="img/players/musap.jpg")
+                            .player-list-item__name Musap
+                            .player-list-item__select
+                                i.icon-check
+                        .player-list-item
+                            .player-list-item__image
+                                img(src="img/players/nurcin.jpg")
+                            .player-list-item__name Nurçin
+                            .player-list-item__select
+                                i.icon-check
+                        .player-list-item
+                            .player-list-item__image
+                                img(src="img/players/yunus.jpg")
+                            .player-list-item__name Yunus
+                            .player-list-item__select
+                                i.icon-check
+                        .button.button--red.button--icon-left.button--absolute
+                            span Kaydet ve Oyuna Başla
+                            i.icon-play-circle
+
+
+
+
+
+
+
+
+
+
