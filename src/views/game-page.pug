@@ -1,0 +1,28 @@
+extends blocks/layout
+block vars
+    - var index = true;
+
+block append head
+    title index
+block append svg
+
+block content
+    .maincontainer
+        .device-container
+            .safearea
+                .main
+                    .main-content
+                        .logo
+                            img(src="img/logo-flat2.svg")
+                        .game
+                            .game__title OYUN BAŞLADI
+                            .game__text Tartışmaya başlayabilirsiniz. Süre bitene kadar casusu yakalayın. Bir yarışmacı seçin ve ona mekan ile ilgili soru sorun. Cevap verdikten sonra o yarışmacı farklı bir yarışmacı seçip soru sorusunu sorsun. Süre bitene kadar bu döngü devam eder.
+                            .game__timer 10:00
+                            .button.button--red.mt-20 Tartışmayı Bitir
+                            hr
+                            .button.button--light.button--icon-left
+                                | Soru ipucu
+                                i.icon-shuffle
+                            .game__tip
+                                i.icon-star.mr-1
+                                | Bu mekana giderken rezervasyon yaptırır mısın?

@@ -1,0 +1,33 @@
+.game {
+  text-align: center;
+
+  &__title {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #FFF;
+  }
+
+  &__text {
+    color: #FFF;
+    opacity: .6;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.3em;
+  }
+
+  &__timer {
+    font-size: 45px;
+    color: #FFF;
+    font-weight: bold;
+  }
+
+  &__tip {
+    color: #FFF;
+    opacity: .8;
+    font-weight: 300;
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 13px;
+  }
+}
